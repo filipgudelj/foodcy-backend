@@ -31,64 +31,146 @@ class AppFixtures extends Fixture
         $user2 = $this->getReference('user_2');
 
         $recipe = new Recipe();
-        $recipe->setTitle("Pile na soli");
-        $recipe->setIngredients("1 pile, 1/2 - 1 kg soli");
-        $recipe->setSteps("1. Ukljucite rernu na 200 C. 2. U tepsiju ulijte soli, toliko da pokrije cijelu povrsinu. Na sredinu polegnite pile, sa prsima na soli. Pecite 30 - 40 minuta, dok ne porumeni. Probajte probosti viljuskom da vidite kada je peceno.");
-        $recipe->setTimeToEat("Ručak");
+        $recipe->setTitle("Whole-Grain Waffles");
+        $recipe->setIngredients("
+        1 (1/4-ounce) package active dry yeast,
+        1/2 cup warm water (105 to 110 degrees),
+        2 cups buttermilk,
+        3 tablespoons peanut oil,
+        2 tablespoons sugar,
+        2 cups whole-wheat pastry flour,
+        1/2 cup rolled oats,
+        4 large egg whites,
+        1/8 teaspoon baking soda,
+        1/4 teaspoon fine salt,
+        Cooking spray for waffle iron
+        ");
+        $recipe->setSteps("Sprinkle the yeast over the water in a large mixing bowl; let stand until foamy, about 5 minutes. Add the buttermilk, oil, sugar and flour and whisk until smooth. Cover the bowl with plastic wrap and refrigerate overnight. Preheat a waffle iron. Whisk the oats, egg whites, baking soda, and salt into the waffle batter until smooth. Lightly mist the hot waffle iron with cooking spray. Add about 1/3 cup of batter to each section, using the back of a spoon to spread batter to the edges. Cook until the waffles are crisp and golden brown, 5 to 7 minutes. Repeat with the remaining batter. Serve with maple syrup.");
+        $recipe->setTimeToEat("Breakfast");
         $recipe->setAuthor($user1);
         $manager->persist($recipe);
 
         $recipe = new Recipe();
-        $recipe->setTitle("Kokoš ili jaje");
-        $recipe->setIngredients("sunka/slanina, jaja, sir");
-        $recipe->setSteps("1. U kalup za muffine na dno stavite po 2 snite sunke po zelji, kod mene su to bile kuhana vratina i pureca u ovitku. Posto je sunka sama po sebi masna nema potrebe stavljati dodatnu masnocu ili kosaricu. 2. Sa sunkom dobijete oblik kosarice i u to dodajte sto god zelite. Kod mene je to bilo cijelo jaje u jedan dio, a u drugi samo kockice gauda sira. 3. Sve zacinite i pecite na 200° samo par minuta dok jaje ne bude dovoljno kuhano/peceno, po vasem ukusu.");
-        $recipe->setCompany("BIOVITA");
-        $recipe->setTimeToEat("Doručak/ručak");
+        $recipe->setTitle("Blueberry Whole Wheat Muffins");
+        $recipe->setIngredients("
+        1 1/2 cups whole wheat pastry flour or white whole wheat flour,
+        1/2 cup rolled oats,
+        1 teaspoon baking powder,
+        1/2 teaspoon fine salt,
+        1/4 teaspoon baking soda,
+        1/2 cup vegetable oil,
+        1/2 cup reduced-fat sour cream,
+        1/2 cup packed light brown sugar,
+        1 teaspoon finely grated lemon zest,
+        1 teaspoon pure vanilla extract,
+        2 large eggs,
+        1 cup blueberries,
+        Muscavado sugar
+        ");
+        $recipe->setSteps("Preheat the oven to 108°C. Line a 12-cup muffin pan with muffin liners. Combine the flour, oats, baking powder, salt and baking soda in a large bowl. Whisk together the vegetable oil, sour cream, brown sugar, lemon zest, vanilla and eggs in another bowl. Fold the sour cream mixture into the flour mixture until just combined, and then fold in the blueberries (don't worry if there are a few lumps). Divide evenly among the prepared muffin pan. Sprinkle with oats and demerara sugar if using. Bake until the muffins are golden and a toothpick inserted in the center comes out clean, 20 to 24 minutes. Cool in the pan for a few minutes, and then transfer to a rack to cool completely.");
+        $recipe->setCompany("Cardinal Health");
+        $recipe->setTimeToEat("Breakfast");
         $recipe->setAuthor($user1);
 
         $manager->persist($recipe);
 
         $recipe = new Recipe();
-        $recipe->setTitle("Batakusa");
-        $recipe->setIngredients("2 jajeta, 150 ml mlijeka, 100 g brasna, prstohvat soli, 1 kasika kisele pavlake, 50 ml mlijeka");
-        $recipe->setSteps("1. Zacinite batkove po zelji (so, vegeta, biber, crvena paprika) pa ispecite na ulju u tavi da porumene sa obje strane.  2. Od ostalih sastojaka umutite smjesu kao za palacinke (treba biti malo gusca).  3. Zagrijte rernu na 220 C. Tepsiju pouljite i zagrijte pa u nju izlijte tijesto, po vrhu poredajte batkove pa vratite u rernu na pecenje.  4. Pustite da se pece oko pola sata, ali provjeravajte. Pita je gotova kada malo naraste i porumeni, tj. poprimi zlatno-smedjkastu boju. 5. Vrelu pitu mozete preliti zalivom od umucenog mlijeka sa kiselom pavlakom i prstohvatom soli.");
-        $recipe->setTimeToEat("Ručak");
+        $recipe->setTitle("Asian Lettuce Wraps");
+        $recipe->setIngredients("
+        2 tsps vegetable oil,
+        450g beef mince,
+        5cm piece ginger,
+        2 spring onions,
+        2 cloves garlic,
+        30ml soy sauce,
+        1 tsp red pepper flakes,
+        60ml hoisin sauce,
+        30g chopped peanuts,
+        Salt and freshly ground black pepper,
+        1 head Boston lettuce
+        ");
+        $recipe->setSteps("In a skillet over medium-high heat, add the vegetable oil and saute beef until brown. Stir in ginger, spring onions, garlic, soy sauce, red pepper flakes and hoisin and cook for 1 minute. Remove from the heat and stir in the peanuts. Season with salt and pepper and serve warm wrapped in lettuce cups.");
+        $recipe->setTimeToEat("Lunch");
         $recipe->setAuthor($user2);
 
         $manager->persist($recipe);
 
         $recipe = new Recipe();
-        $recipe->setTitle("Limunada");
-        $recipe->setIngredients("2 limuna, 20-25 listica svjeze mente, 2-3 Zlice secera, 4 Case hladne vode");
-        $recipe->setSteps("1. U posudu u kojoj cete pripremati sok naribati koricu 2 limuna dodati listice mente prethodno isprane pod vodom i dodati secer, zatim sve zajedno trljati prstima da menta pusti svoju aromu. Dodati hladnu vodu i sok od 2 limuna i mijesati dok se secer ne otopi. Na kraju limunadu procijediti i staviti je hladiti. 2. Po zelji u limunadu na kraju staviti listice mente i kriske limuna uz puno leda");
-        $recipe->setCompany("Bio&Bio");
-        $recipe->setTimeToEat("Bilo kad");
+        $recipe->setTitle("Healthy Carrot Muffins");
+        $recipe->setIngredients("
+        3/4 cup plain flour,
+        1/2 cup whole wheat flour,
+        2/3 cup dark brown sugar,
+        2 teaspoons ground cinnamon,
+        1 teaspoon baking powder,
+        1/2 teaspoon baking soda,
+        Pinch fine salt,
+        2 large eggs,
+        1/3 cup vegetable oil,
+        1 tablespoon pure vanilla extract,
+        4 medium carrots,
+        1/2 cup tinned pineapple
+        ");
+        $recipe->setSteps("Preheat the oven to 350 degrees F. Line twelve 1/2-cup muffin cups with paper muffin liners. Whisk the flours with the brown sugar, wheat germ, cinnamon, baking powder, baking soda, and salt in a medium bowl. In another medium bowl lightly whisk the egg, then whisk in the vegetable oil, and vanilla extract. Quickly and lightly fold the wet ingredients into the dry ingredients with a rubber spatula. Stir in the carrots and pineapple just until evenly moist; the batter will be very thick. Divide the batter evenly among the muffin cups. Bake until golden and a toothpick inserted in the centers comes out clean, about 30 minutes. Turn muffins out of the tins and cool on a rack. Serve warm.");
+        $recipe->setCompany("Walgreens Boots Alliance");
+        $recipe->setTimeToEat("Snack");
         $recipe->setAuthor($user2);
 
         $manager->persist($recipe);
 
         $recipe = new Recipe();
-        $recipe->setTitle("Grčka juha od leće");
-        $recipe->setIngredients("500 g suhe smeđe ili zelene leće, 1,25 l vode, 1 mali luk, 2 češnjaka, 1 žlica Vegete, 125 ml maslinova ulja, 2 Vegeta Maestro lovorova lista, Vegeta Maestro morska sol, Vegeta Maestro crni papar mljeveni");
-        $recipe->setSteps("1. Leću properite i ostavite da se namače u vodi 2 sata. Zagrijte vodu u većem loncu pa dodajte ocijeđenu leću, sjeckani luk, protisnuti češnjak, lovorov list i Vegetu. 2. Kuhajte poklopljeno 25 minuta. 3. Dodajte maslinovo ulje, koncentrat rajčice i vinski ocat. Kuhajte oko 15 minuta dok leća ne omekša, a juha ne postane gušća");
-        $recipe->setTimeToEat("Ručak/večera");
+        $recipe->setTitle("Courgette Ribbon Pasta");
+        $recipe->setIngredients("
+        340g wholemeal fettuccini,
+        2 medium green courgettes (about 450g),
+        2 medium yellow courgettes (about 450g),
+        3 tbsp olive oil,
+        4 cloves garlic,
+        240ml low-sodium vegetable stock,
+        25g grated Parmesan, plus 15g or vegetarian alternative,
+        15g finely minced parsley leaves,
+        35g thinly sliced basil leaves,
+        1/2 tsp red pepper flakes,
+        1/2 tsp fresh ground black pepper,
+        Salt
+        ");
+        $recipe->setSteps(" In a large pasta pot, cook pasta al dente, 1 or 2 mins less than the package instructions call for. Drain. Meanwhile, slice off ends of courgettes and discard. Cut courgettes in half lengthwise. Using a mandoline, or carefully with a sharp knife, slice zucchini into very thin (about 0.25cm) slices, trying to keep some skin on each piece for color. Stack slices and cut in half lengthwise. Reserve courgette ribbons in a large bowl. In the pasta pot, heat the olive oil over low-medium heat. Add garlic and cook until soft and translucent but not browned, about 1 min. Add courgette ribbons and 65ml stock, raise heat to medium-high and cook until courgette is still somewhat firm but just cooked, about 3 mins. Return pasta to pot and add remaining stock; cook for 2 to 3 mins, until liquid has mostly absorbed into the pasta. Add 25g of the Parmesan, parsley, basil, red pepper flakes, black pepper and toss to combine. Season with salt, to taste. Serve garnished with additional parsley, basil and the remaining 15g of cheese.");
+        $recipe->setTimeToEat("Lunch");
         $recipe->setAuthor($user2);
 
         $manager->persist($recipe);
 
         $recipe = new Recipe();
-        $recipe->setTitle("Tofu s povrćem");
-        $recipe->setIngredients("1 tofu, 2 mrkve, 2 mladi luk, 2 cijela jaja");
-        $recipe->setSteps("1. Mladi luk izrezati na kolutiće. Mrkvu i tofu naribati na ribež. Na maslinovo ulje na tavi prvo popržiti mladi luk pa potom dodati mrkvu i pustiti da voda ispari iz ne par minuta. Nakon toga dodati tofu i pržiti dok tofu ne dobije boju. Dodati zaćine po želji i nakraju dva umučena jaja da sjedine jelo. Ja volim na kraju dodati malo naribanog sira.");
-        $recipe->setTimeToEat("Ručak");
+        $recipe->setTitle("Tenderstem Broccoli, Summer Pea and Mint Soup");
+        $recipe->setIngredients("
+        1 tbsp olive oil,
+        25g butter,
+        1 medium white onion finely chopped,
+        1 garlic clove peeled and finely chopped,
+        400ml chicken stock,
+        400g shelled peas,
+        100g Tenderstem broccoli florets,
+        Juice of 1 lemon,
+        Salt and cracked black pepper
+        ");
+        $recipe->setSteps("Melt the oil and the butter, add the onion and garlic and cook over a gentle heat until soft, about 10 minutes. Add the chicken stock and bring to the boil, add the peas and Tenderstem and cook until they are soft (about 5 minutes). Remove half of the soup and blend in a food processor then add back into the rest of the soup. Add lemon juice, season with salt and pepper. Stir in mint. Serve in warmed bowls drizzled with extra virgin olive oil.");
+        $recipe->setTimeToEat("Lunch");
         $recipe->setAuthor($user2);
 
         $manager->persist($recipe);
 
         $recipe = new Recipe();
-        $recipe->setTitle("Jogurt kolač s voćem");
-        $recipe->setIngredients("3 jaja, 1 casa secera, 1 Vanilin šećer Dolcela, 1 casa jogurta, 1/2 case ulja, 2,5 case brasna, 1/2 kesice Praška za pecivo Docela, ribana kora limina");
-        $recipe->setSteps("1. Jaja umutiti sa secerom i vanilinim secerom dok se sav secer ne Istopi Pa dodati Jogurt, ulje, Brasno, prasak za pecivo i Koru limuna. 2. Usuti tjesto u pouljeni kalup, preko raspodjeliti voce po zelji i peci na 180 Stepeni  25-30 Minuta. Ohladjen Kolac posuti sa secerom u prahu. Casa je od 200 ml. ");
+        $recipe->setTitle("Pasta with Pecorino and Pepper");
+        $recipe->setIngredients("
+        1 tbsp whole black Tellicherry peppercorns,
+        Salt,
+        250g dried Italian egg pasta,
+        100g freshly grated aged Pecorino cheese,
+        30ml double cream,
+        15g unsalted butter,
+        2 tbsp minced fresh parsley leaves
+        ");
+        $recipe->setSteps("Place the peppercorns in a mortar and pestle and crush them until you have a mixture of coarse and fine bits. (You can also grind them in a small food mill or coffee grinder.) Set aside. Fill a large, heavy-bottomed pot with water and bring to a boil over high heat. Add 1 tbsp salt and the pasta and cook according to the directions on the package until al dente. Ladle 250ml of the pasta cooking water into a glass measuring cup and reserve it. Drain the pasta quickly in a colander and return the pasta to the pot with a lot of the pasta water still dripping. Working quickly, with the heat on very low, toss the pasta with 50g of the grated pecorino, the crushed peppercorns, cream, butter, parsley and 1 tsp salt, tossing constantly. If the pasta seems dry, add some of the reserved cooking water. Off the heat, toss in the remaining 50g Pecorino. Serve immediately with a big bowl of extra grated pecorino for sprinkling. ");
         $recipe->setTimeToEat("Nakon ručka");
         $recipe->setAuthor($user2);
 
@@ -103,64 +185,64 @@ class AppFixtures extends Fixture
         $user2 = $this->getReference('user_2');
 
         $advice = new Advice();
-        $advice->setTitle("Sir premazan maslacem dulje ostaje svjež");
-        $advice->setContent("Kako bi polutvrdi sir dulje ostao svjež i bez pljesni, poslužite se maslacem. Svježe odrezani kraj premažite slojem maslaca i zamotajte u plastičnu foliju.");
+        $advice->setTitle("Be Clean");
+        $advice->setContent("Set up your workspace by gathering clean tools, bowls and utensils. And make sure to keep a trashcan within arm’s reach.");
         $advice->setAuthor($user1);
 
         $manager->persist($advice);
 
         $advice = new Advice();
-        $advice->setTitle("Kakao i čili odlično se nadopunjuju");
-        $advice->setContent("Kad pripremate vrlo ljuto jelo s čilijem u prahu ili pikantnim papričicama, prije kuhanja dodajte pola žličice kakaa u prahu koji će pružiti finu aromu.");
+        $advice->setTitle("Peel Tomatoes With Ease");
+        $advice->setContent("Cut an X in the top, and then simmer in a pot of hot water for 15 to 30 seconds. Cool down and the skin will fall right off.");
         $advice->setAuthor($user1);
 
         $manager->persist($advice);
 
         $advice = new Advice();
-        $advice->setTitle("Banana i jabuka za mekše pečenje");
-        $advice->setContent("U posudu s pečenjem stavite zrelu, oguljenu bananu. Tako će meso biti mekše, a kako bi bilo sočnije, ubacite i jabuku narezanu na kockice.");
+        $advice->setTitle("Baking Scale");
+        $advice->setContent("Scales are not only an accurate way to measure your cooking ingredients, but they streamline the entire process.");
         $advice->setAuthor($user1);
 
         $manager->persist($advice);
 
         $advice = new Advice();
-        $advice->setTitle("Pazite da se tjestenina ne raskuha u juhi");
-        $advice->setContent("Kupovno tijesto za juhu omekša već od samog stajanja u vreloj vodi. Ako juhu ne namjeravate poslužiti odmah, upotrijebite domaću tjesteninu ili noklice.");
+        $advice->setTitle("Embrace Salt");
+        $advice->setContent(" Don’t be afraid to use salt; it pulls the flavors out of your dishes. Cook with kosher salt and season with sea salt.");
         $advice->setAuthor($user1);
 
         $manager->persist($advice);
 
         $advice = new Advice();
-        $advice->setTitle("Tjestenini treba mjesta da se kvalitetno skuha");
-        $advice->setContent("Kuhanje u premalo vode tjesteninu čini ljepljivom i gumenastom bez obzira na to je li riječ o špagetima ili tjestenini za juhu. Zato uvijek koristite veliku posudu i puno vode.");
+        $advice->setTitle("Ignore Cooking Times");
+        $advice->setContent("Check your dishes by using your own senses (smell, taste, touch) to decide when they are done.");
         $advice->setAuthor($user1);
 
         $manager->persist($advice);
 
         $advice = new Advice();
-        $advice->setTitle("Začini u mlinac za kavu");
-        $advice->setContent("Mučite li se s usitnjavanjem začina i sjemenki? Mislite da ćete to obaviti u mužaru, ali samo vam leti na sve strane. Iskoristite mlinac za kavu koji je završio u zapećku u mnogim obiteljima. Ne meljite ih previše, jer se arome brzo gube, a jednom samljevene spremite u male kutijice.");
+        $advice->setTitle("Eggs");
+        $advice->setContent("Crack eggs on a paper towel on the counter — no shells and easy cleanup!");
         $advice->setAuthor($user2);
 
         $manager->persist($advice);
 
         $advice = new Advice();
-        $advice->setTitle("Led protiv masnoće");
-        $advice->setContent("Želite li maknuti s površine juhe ili variva suvišnu masnoću, ne morate više stajati dugo nad loncem i hvatati je žlicom s kojom vrlo malo uhvatimo. Najbolje je ubaciti kockicu, dvije leda koje će skrutiti masoću i mnogo ćete je lakše ukloniti.");
+        $advice->setTitle("Prevent Tears");
+        $advice->setContent("To prevent tears, cut off the root of the onion before you slice.");
         $advice->setAuthor($user2);
 
         $manager->persist($advice);
 
         $advice = new Advice();
-        $advice->setTitle("Limun i limeta: iscijedi pa zamrzni");
-        $advice->setContent("Ako su vam limun ili limeta koje čuvate u hladnjaku počeli poprimati smeđe mrljice ili se sušiti, iscijedite sok i zamrznite ga. Tako ćete ga imati pri ruci kad vam zatreba, a nećete morati bacati limun i limete koje niste iskoristili.");
+        $advice->setTitle("Simple Syrup");
+        $advice->setContent("Create simple syrup by simmering 1 cup of water and 1 cup of sugar in a medium heated pot until the sugar dissolves. Bottle and store in your refrigerator for up to 2 weeks.");
         $advice->setAuthor($user2);
 
         $manager->persist($advice);
 
         $advice = new Advice();
-        $advice->setTitle("Od ostataka se pravi temeljac");
-        $advice->setContent("Riblje glave, kosti, repne peraje nisu dobre za jelo, no od njih se pravi odličan temeljac - kuhajte ga s malo prešina, celera i lovora.");
+        $advice->setTitle("Chilli Peppers");
+        $advice->setContent("When cooking with chili peppers, protect your hands and eyes by wearing rubber gloves. Or coat your hands in vegetable oil and wash them with soap and water immediately after handling.");
         $advice->setAuthor($user2);
 
         $manager->persist($advice);
